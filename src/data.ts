@@ -1,4 +1,25 @@
-export const ingredients = [
+export type ElementType = "fire" | "water" | "earth" | "air";
+
+export interface IIngredient {
+  id: string;
+  name: string;
+  element: ElementType;
+}
+
+export interface IPotion {
+  id: string;
+  name: string;
+  effect: string;
+  hint: string;
+  image: string;
+}
+
+export interface IRecipie {
+  ingredients: string[];
+  result: string;
+}
+
+export const ingredients: IIngredient[] = [
   { id: "ing_1", name: "Ember Root", element: "fire" },
   { id: "ing_2", name: "Blazing Petal", element: "fire" },
   { id: "ing_3", name: "Ash Mushroom", element: "fire" },
@@ -24,70 +45,80 @@ export const ingredients = [
   { id: "ing_20", name: "Gale Dust", element: "air" },
 ];
 
-export const potions = [
+export const potions: IPotion[] = [
   {
     id: "pot_1",
     name: "Healing Potion",
     effect: "heal",
     hint: "Flowing water and living roots restore what was lost.",
+    image: "1.png",
   },
   {
     id: "pot_2",
     name: "Fire Bomb",
     effect: "damage_fire",
     hint: "Pure fire essence unleashed creates explosive destruction.",
+    image: "2.png",
   },
   {
     id: "pot_3",
     name: "Frost Shield",
     effect: "defense",
     hint: "Cold water and solid earth form an unbreakable barrier.",
+    image: "3.png",
   },
   {
     id: "pot_4",
     name: "Invisibility Potion",
     effect: "invisible",
     hint: "Air and subtle flow bend light away from sight.",
+    image: "4.png",
   },
   {
     id: "pot_5",
     name: "Speed Elixir",
     effect: "speed",
     hint: "Only the fastest winds can grant unmatched speed.",
+    image: "5.png",
   },
   {
     id: "pot_6",
     name: "Stone Skin",
     effect: "armor",
     hint: "Deep earth and hardened minerals grant resilience.",
+    image: "6.png",
   },
   {
     id: "pot_7",
     name: "Lightning Strike",
     effect: "damage_air",
     hint: "Storm energy and shifting air create raw power.",
+    image: "7.png",
   },
   {
     id: "pot_8",
     name: "Regeneration Brew",
     effect: "regen",
     hint: "Nature thrives when water and earth work together.",
+    image: "8.png",
   },
   {
     id: "pot_9",
     name: "Steam Burst",
     effect: "area_damage",
     hint: "When fire meets water, pressure builds and bursts.",
+    image: "9.png",
   },
   {
     id: "pot_10",
     name: "Dust Storm",
     effect: "blind",
     hint: "Earth and air together create a blinding storm.",
+    image: "10.png",
   },
 ];
 
-export const recipes = [
+export const recipes: IRecipie[] = [
   { ingredients: ["ing_6", "ing_13"], result: "pot_1" },
   { ingredients: ["ing_2", "ing_4"], result: "pot_2" },
   { ingredients: ["ing_7", "ing_11"], result: "pot_3" },
