@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Schoolbell&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(237, 237, 237);
+  padding: 2rem 10rem;
+  font-family: "Indie Flower", cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Schoolbell", cursive;
+  color: rgb(236, 23, 130);
+  font-size: 50px;
+}
+
+main {
+  display: flex;
+  gap: 50px;
+}
+
+.ingredients {
+  background-color: white;
+  width: 250px;
+  text-align: center;
+  padding: 20px;
+  border: 3px solid black;
+  border-radius: 10px;
+  font-size: 22px;
+}
+
+.ingredients-cards {
+  margin-top: 20px;
+}
+
+.card {
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  box-shadow: 2px 2px 6px gray;
+  cursor: pointer;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.brewing {
+  border: 3px solid black;
+  border-radius: 10px;
+  background-color: white;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 1rem 2rem;
+}
+
+.brewing-buttons {
+  display: flex;
+  gap: 40px;
+}
+
+.brew-button,
+.clear-button {
+  padding: 10px 20px;
+  font-family: "Schoolbell", cursive;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.brew-button {
+  background-color: rgb(239, 21, 119);
+  color: rgb(255, 213, 232);
+}
+.clear-button {
+  background-color: rgb(21, 188, 239);
+  color: rgb(183, 236, 252);
+}
+
+.brew-button:hover,
+.clear-button:hover {
+  box-shadow: 2px 2px 6px gray;
+  cursor: pointer;
+}
+
+.brew-button:disabled {
+  background-color: gray;
+}
+
+.selected-ingredients {
+  display: flex;
+  gap: 20px;
+}
+
+.potions {
+  width: 600px;
+  border: 3px solid black;
+  border-radius: 10px;
+  background-color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 20px 100px;
+}
+
+.potions > div {
+  height: 60px;
+  width: 60px;
+  border: 2px solid black;
+  border-radius: 5px;
+  opacity: 0.3;
+}
+
+.potions > div:hover {
+  cursor: pointer;
+}
+
+.potions > div > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.hints {
+  width: 600px;
+  border: 3px solid black;
+  border-radius: 10px;
+  background-color: white;
+  padding: 1rem 2rem;
+}
